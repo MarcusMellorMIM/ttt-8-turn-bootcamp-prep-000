@@ -44,7 +44,7 @@ end
 # code for a turn 
 def turn(board)
   
-  loop
+   loop do
     puts "Please enter 1-9:"
     index = input_to_index( gets.chomp )
     if valid_move?( board, index )
