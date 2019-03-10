@@ -43,10 +43,16 @@ end
 
 # code for a turn 
 def turn(board)
-  puts "Please enter 1-9:"
-  index = input_to_index( gets.chomp )
-  if valid_move?( board, index )
-    move( board, index)
-    display_board( board )
+  
+  loop
+    puts "Please enter 1-9:"
+    index = input_to_index( gets.chomp )
+    if valid_move?( board, index )
+      move( board, index)
+      display_board( board )
+      break
+    else
+      puts "That was an invalid entry"
+    end
   end
 end
